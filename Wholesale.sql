@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2019 at 07:29 PM
+-- Generation Time: Dec 01, 2019 at 08:04 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -41,8 +41,16 @@ CREATE TABLE `buyer` (
 INSERT INTO `buyer` (`buyer_id`, `name`, `address`) VALUES
 (1, 'Ashish\'s Farm', '234 Oak Way, Para NJ '),
 (2, 'Henry\'s Mechanical Parts', '56 One Star Lane, Que NJ'),
+(5, 'h', '222, Locust Bills NJ'),
 (6, 'Alabi Fish Farm', '3445 ,Epuc NJ'),
-(12, 'Jorge\'s Raw Metals', '222, Locust Bills NJ');
+(7, 'QWE', 'ieie'),
+(8, 'g', 'hhh'),
+(9, 'Alabi Fish Farm', '21 West Place NJ'),
+(10, 'Alabi Fish Farm', '222, Locust Bills NJ'),
+(11, 'Jorge Raw Metals', '222, Locust Bills NJ'),
+(12, 'Jorge\'s Raw Metals', '222, Locust Bills NJ'),
+(13, 'Jorge\'s Raw Metals\'', '222, Locust Bills NJ'),
+(14, '', '');
 
 -- --------------------------------------------------------
 
@@ -128,10 +136,9 @@ CREATE TABLE `revenue` (
 --
 
 INSERT INTO `revenue` (`revenue_id`, `customer_id`, `stock_id`, `payment`, `status`, `revenue_date`) VALUES
-(3, 1, 1, 1119.9, 0, '2015-06-12'),
-(4, 3, 3, 915.98, 1, '2019-11-21'),
-(5, 1, 2, 5.37, 1, '2019-12-01'),
-(6, 3, 2, 35.8, 0, '2019-10-11');
+(1, 3, 2, 8.95, 0, '0000-00-00'),
+(2, 3, 2, 3.58, 1, '0000-00-00'),
+(3, 1, 1, 1119.9, 0, '2015-06-12');
 
 -- --------------------------------------------------------
 
@@ -153,9 +160,9 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`stock_id`, `name`, `quantity`, `min_quantity`, `unit_price`, `unit_cost`) VALUES
-(1, 'Nvidia GTX 1070 Graphics Card', 356, 25, 559.95, 211.67),
-(2, 'Cabbage', 1340, 200, 1.79, 0.11),
-(3, 'Asus 4k Monitor', 12, 20, 457.99, 89.79);
+(1, 'Nvidia GTX 1070 Graphics Card', 400, 25, 559.95, 211.67),
+(2, 'Cabbage', 1363, 200, 1.79, 0.11),
+(3, 'Asus 4k Monitor', 3, 20, 457.99, 89.79);
 
 --
 -- Indexes for dumped tables
@@ -235,7 +242,7 @@ ALTER TABLE `expense`
 -- AUTO_INCREMENT for table `revenue`
 --
 ALTER TABLE `revenue`
-  MODIFY `revenue_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `revenue_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `stock`
